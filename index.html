@@ -1,0 +1,92 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Princess Bismiya Turns 11 🎉</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Background Music -->
+    <audio autoplay loop id="bg-music">
+        <source src="images/(Synthesia) Romantic Happy Birthday (arr. Miranda Wong) _ Piano Cover by Seander Alfonsus.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay">
+            <h1>🎉 Princess Turns 11 🎉</h1>
+            <p>Happy Birthday Bismiya!</p>
+            <p>You are the sparkle that lights up our lives 💖</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Moments of Magic ✨</h2>
+        <div class="photo-container">
+            <div class="photo-card">
+                <img src="images/shining-star.jpg" alt="Bismiya 1">
+                <p>Shining Star 🌟</p>
+            </div>
+            <div class="photo-card">
+                <img src="images/Cutest-Smile.jpg" alt="Bismiya 2">
+                <p>Cutest Smile Ever 😊</p>
+            </div>
+            <div class="photo-card">
+                <img src="images/berthday-queen.jpg" alt="Bismiya 3">
+                <p>Our Birthday Queen 👑</p>
+            </div>
+            <div class="photo-card">
+                <img src="images/magic.jpg" alt="Bismiya 4">
+                <p>Magic in Every Moment ✨</p>
+            </div>
+            <div class="photo-card" >
+                <img src="images/vibe.jpg" alt="Bismiya 5">
+                <p>Princess Vibes 💫</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2>🎥 A Special Memory 🎥</h2>
+        <div class="video-container">
+            <video autoplay muted loop poster="images/video-thumbnail.jpg">
+                <source src="images/WhatsApp Video 2025-05-29 at 19.47.07_7b0632b5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Final Message -->
+    <section class="final-message">
+        <h2>🎂 A Special Wish 🎂</h2>
+        <p>
+            Dear Bismiya,<br />
+            On your 11th birthday, may your heart be filled with joy,<br />
+            your dreams take flight, and your smile stay forever bright!<br />
+            We love you so much 💕
+        </p>
+    </section>
+   
+
+
+    <script src="script.js">
+        // script.js
+            // Music autoplay fix for some browsers
+            window.addEventListener('click', function () {
+                const music = document.getElementById('bg-music');
+                if (music.paused) {
+                    music.play().catch(() => { });
+                }
+            });
+
+    </script>
+</body>
+
+</html>
