@@ -10,11 +10,17 @@
 </head>
 
 <body>
-    <!-- Background Music -->
     <audio autoplay loop id="bg-music">
-        <source src="images/(Synthesia) Romantic Happy Birthday (arr. Miranda Wong) _ Piano Cover by Seander Alfonsus.mp3" type="audio/mpeg" />
+        <source
+            src="images/(Synthesia) Romantic Happy Birthday (arr. Miranda Wong) _ Piano Cover by Seander Alfonsus.mp3"
+            type="audio/mpeg" />
         Your browser does not support the audio element.
     </audio>
+
+    <div id="music-notice"
+        style="position:fixed;top:0;left:0;width:100%;background:#fff0f6;color:#cc3366;text-align:center;padding:1rem;z-index:999;">
+        Tap anywhere to play background music 🎵
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -45,7 +51,7 @@
                 <img src="images/magic.jpg" alt="Bismiya 4">
                 <p>Magic in Every Moment ✨</p>
             </div>
-            <div class="photo-card" >
+            <div class="photo-card">
                 <img src="images/vibe.jpg" alt="Bismiya 5">
                 <p>Princess Vibes 💫</p>
             </div>
@@ -73,19 +79,18 @@
             We love you so much 💕
         </p>
     </section>
-   
 
 
-    <script src="script.js">
-        // script.js
-            // Music autoplay fix for some browsers
-            window.addEventListener('click', function () {
-                const music = document.getElementById('bg-music');
-                if (music.paused) {
-                    music.play().catch(() => { });
-                }
-            });
 
+    <script>
+        // Music autoplay fix for some browsers
+        function enableMusic() {
+            const music = document.getElementById('bg-music');
+            music.play().catch(() => { });
+            document.getElementById('music-notice').style.display = 'none';
+            window.removeEventListener('click', enableMusic);
+        }
+        window.addEventListener('click', enableMusic);
     </script>
 </body>
 
